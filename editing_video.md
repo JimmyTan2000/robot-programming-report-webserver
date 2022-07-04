@@ -22,7 +22,7 @@ You will very likely use your smartphone for recording. You may shot your video 
 Even you record your video in landscape or portrait mode the smartphone camera will not notice the orientation and record what it sees through the lens and saves the results into memory. For example assume that your camera sees the world in the right orientation if you hold your smartphone upright. If you then rotate your phone 90 degrees counterclockwise then the objects which are on the left of your sight will be stored first and the resulting image in the memory will appear rotated 90 degrees counterclockwise. To correct this the help of the orientation sensor in your smartphone is attached to your image as meta data. Here is an example of such metadata:
 
 ```bash
-ffprobe -hide_banner -i IN.mp4
+ffprobe -hide_banner IN.mp4
 ```
 ```
 ...
