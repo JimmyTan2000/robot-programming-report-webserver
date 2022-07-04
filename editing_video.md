@@ -143,7 +143,7 @@ In Sphinx, content which is not converted but directly copied to the output are 
 ```html
 <video controls>
 	<source
-		src="_static/xadc_ext_pin_reading_boolean_thumbwheel_potentiometer_demo.webm
+		src="_static/xadc_ext_pin_reading_boolean_thumbwheel_potentiometer_demo.webm"
 		type="video/webm"
 	>
 </video>
