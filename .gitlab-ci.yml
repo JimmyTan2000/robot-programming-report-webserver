@@ -6,6 +6,8 @@ build-webpages:
   image: python
   stage: build
   script:
+  - apt update
+  - apt install -y enchant-2
   - pip install -U pip
   - pip install -U -r python-requirements.txt
   - make html
