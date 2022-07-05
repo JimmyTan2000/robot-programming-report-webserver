@@ -21,7 +21,7 @@ project = 'Sphinx-book template'
 copyright = 'Creative Commons Attribution 4.0 International License'
 author = 'Gökçe Aydos'
 html_logo = 'apple_notes_icon_public_domain_via_wikimedia_commons.png'
-
+html_favicon = html_logo
 
 # -- General configuration ---------------------------------------------------
 
