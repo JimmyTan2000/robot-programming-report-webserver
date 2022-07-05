@@ -5,7 +5,7 @@ The paragraph continues
 
 This is the second paragraph.
 
-## Blockquotes
+## Block quotes
 
 Kermit from the Muppet Movie:
 

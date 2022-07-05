@@ -20,6 +20,7 @@
 project = 'Sphinx-book template'
 copyright = 'Creative Commons Attribution 4.0 International License'
 author = 'Gökçe Aydos'
+html_logo = 'apple_notes_icon_public_domain_via_wikimedia_commons.png'
 
 
 # -- General configuration ---------------------------------------------------
@@ -29,7 +30,11 @@ author = 'Gökçe Aydos'
 # ones.
 extensions = [
     'myst_parser',
+    'sphinxcontrib.spelling',
 ]
+
+spelling_word_list_filename = 'spelling_word_list.txt'
+spelling_show_suggestions = True
 
 source_suffix = {
     '.md': 'markdown',

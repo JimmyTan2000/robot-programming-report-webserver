@@ -1,19 +1,30 @@
-image: python
-
 variables:
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
   SSH_KNOWN_HOSTS: $SSH_KNOWN_HOSTS
 
 build-webpages:
+  image: python
   stage: build
   script:
-  - pip install -U sphinx-book-theme myst-parser
+  - pip install -U pip
+  - pip install -U -r python-requirements.txt
   - make html
   artifacts:
     paths:
     - _build/html
 
+spellcheck:
+  image: archlinux
+  stage: test
+  script:
+  - pacman -Syu --noconfirm
+  - pacman -S --noconfirm hunspell-en_us nuspell enchant python-pip python-wheel python-cairo make git
+  - python -m pip install -U pip
+  - python -m pip install -U -r python-requirements.txt
+  - SPHINXOPTS='-j auto -W' make spelling
+
 deploy-webpages:
+  image: python
   stage: deploy
   # from https://docs.gitlab.com/ee/ci/ssh_keys/
   before_script:

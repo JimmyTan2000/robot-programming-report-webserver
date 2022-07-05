@@ -11,5 +11,6 @@ ch2-relevant-concepts.md
 ch3-approach.md
 ch4-results.md
 markdown_examples.md
+spellcheck.md
 editing_video.md
 ```

@@ -37,7 +37,7 @@ However there are viewers which do not support this metadata which may lead to r
 
 #### Why rotation using metadata?
 
-Probably the camera has dedicated encoder chip which can record and encode the frames to a compressed video format. The encoding hardware is hardwired so the same pixels on the camera photosensor chip are stored at the same memory location of the encoder hardware which makes rotation not possible. It is much easier to do the rotation while viewing the image.
+Probably the camera has dedicated encoder chip which can record and encode the frames to a compressed video format. The encoding hardware is hardwired so the same pixels on the camera photo sensor chip are stored at the same memory location of the encoder hardware which makes rotation not possible. It is much easier to do the rotation while viewing the image.
 
 ### Editing and converting to WebM container format with `ffmpeg`
 
@@ -61,7 +61,7 @@ ffplay -hide_banner -vf 'crop=in_w-1350:in_h-400:0, scale=640:-2' IN.mp4
   - crops 1350 pixels from the right
   - 200 pixels from the top
   - 200 pixels from the bottom
-  - sets the viewbox's x coordinate to $x = 0$
+  - sets the view box's x coordinate to $x = 0$
   - Y coordinate is set automatically to $y = 200$ because the filter leaves the center of the frame as default.
 - `scale=640:-2` scales down the width to 640 pixel while keeping the aspect ratio.
 
@@ -79,11 +79,11 @@ Currently [`ffplay -noautorotate` seems to have a bug](https://trac.ffmpeg.org/t
 
 ### Converting to WebM container
 
-A video is typically delivered in a [container format](https://en.wikipedia.org/wiki/Container_format) which allows video, sounds for different languages, subtitles etc to be included in a single file. Browsers support various containers which in turn support many codecs. Mozillla Developer Network (MDN) has [recommendations which codec and container to choose](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec). According to MDN the first choice is:
+A video is typically delivered in a [container format](https://en.wikipedia.org/wiki/Container_format) which allows video, sounds for different languages, subtitles etc to be included in a single file. Browsers support various containers which in turn support many codecs. Mozilla Developer Network (MDN) has [recommendations which codec and container to choose](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec). According to MDN the first choice is:
 
 ```{note}
 :class: margin
-Pdf and Zip files are containers too.
+PDF and ZIP files are containers too.
 ```
 
 - WebM container with
