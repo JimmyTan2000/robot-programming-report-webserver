@@ -22,6 +22,10 @@ For example the spelling word list in this project contains:
 
 The continuous integration (CI) has automatic spellcheck integrated, so if you have spelling errors after you pushed your code to the repository, then the spellcheck stage of the CI pipeline will fail.
 
+```{note}
+The spellcheck activates `-W` option in Sphinx, which treats warnings as errors. If you already get some warnings before spellcheck, this may lead to compilation errors and thus break your pipeline.
+```
+
 If you want to deactivate spellcheck in CI, then remove the following lines from `.gitlab-ci.yml`:
 
 ```{literalinclude} .gitlab-ci.yml

@@ -5,6 +5,8 @@ The paragraph continues
 
 This is the second paragraph.
 
+By increasing the number of `#` symbols, we can create subchapters, sub-subchapters, etc.
+
 ## Block quotes
 
 Kermit from the Muppet Movie:
