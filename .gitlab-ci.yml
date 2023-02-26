@@ -15,6 +15,19 @@ build-webpages:
     paths:
     - _build/html
 
+build-pdf:
+  image: sphinxdoc/sphinx-latexpdf
+  stage: build
+  script:
+  - apt update
+  - apt install -y enchant-2
+  - pip install -U pip
+  - pip install -U -r python-requirements.txt
+  - make latexpdf
+  artifacts:
+    paths:
+    - _build/latex/*pdf
+
 spellcheck:
   image: archlinux
   stage: test
