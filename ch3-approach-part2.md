@@ -202,32 +202,6 @@ Instead of slowing down, I just make the robot bang into the wall at full speed 
                         self.state = next_state
 ```
 
-### ***Results***:
-With those codes implemented, we can generalize the maze solving capabalities in a surprisingly simple way. Below are a few of GIFs to demonstrate the code in action: 
-
-***Showcases:***
-
-Default 5 x 5 world, location 1:
-
-![Code showcase 5 x 5, case 1](/media/gifs/challenge5_1_showcase.gif)
-
-Default 5 x 5 world, location 2:
-
-![Code showcase 5 x 5, case 2](/media/gifs/challenge5_2_showcase.gif)
-
-Competition, world_5_5_a:    
-
-![Code showcase world_5_5_a](/media/gifs/challenge5_a_showcase.gif)
-
-Competition, world_5_5_b:    
-
-![Code showcase world_5_5_b](/media/gifs/challenge5_b_showcase.gif)
-
-Competition, world_5_5_c:  
-
-![Code showcase world_5_5_c](/media/gifs/challenge5_c_showcase.gif)
-
-
 ### ***Visual diagram to show how the code works:*** 
 
 ![Architecture Diagram](/media/architecture_diagram_2.png)

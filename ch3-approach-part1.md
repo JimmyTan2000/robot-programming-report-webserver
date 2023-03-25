@@ -105,10 +105,6 @@ Combining both concepts, the solution looks as simple as below:
 
 This function will be executed everytime a LaserScan msg is received, about 5 times per second. The value msg.ranges[0] is the distance between the direct front of the robot to the obstacle (normally walls in our labyrinth). If the distance between them is more than 0.18, the robot will simply move forward with 15% of its maximum linear velocity, otherwise, it will stop completely. 
 
-### _Result_: 
-
-![Challenge 1 gif](/media/gifs/challenge1_showcase.gif)
-
 -----
    
 # Challenge 2 
@@ -132,10 +128,6 @@ The <mark>collision_avoidance_sensor()</mark> is just to allow the robot to move
 ![Collision avoidance with sensor, code](/media/collision_avoidance_sensor.png)
 
 As you have probably already realised, the states that I am using here are not generic. For example, there are states such as "first rotation stopped" and "first wall reached". The reason for that is, at the point of development, I have no idea that we have to make the code as general as possible so that it can solve different mazes with the same piece of code. So, for challenge 1 to challenge 4, the mazes are solved in such a hard coded way (which means the code would not work anymore if the maze changes). Fortunately, I have generalized the code in challenge 5. 
-
-### _Result_: 
-
-![GIF for challenge 2](/media/gifs/challenge2_showcase.gif)
 
 --------
 # Challenge 3 
@@ -173,10 +165,6 @@ From the quartenion information that is returned by the odom_callback(), we can 
 
 From the code above, we can see that the bot will stop rotating when the value of "k" is 180 or -180. Which also means that it will stop rotating when it is facing the left side, which is what we want to achieve in this challenge. It is obviously hard coded at this point. Code generalisation will be achieved in challenge 5. 
 
-### _Result_: 
-
-![Result of challenge 3](/media/gifs/challenge3_showcase.gif)
-
 -----
 
 # Challenge 4 
@@ -205,9 +193,6 @@ And again, for this challenge, there are more states as shown in the screenshot 
 
 Surprisingly enough, because the solution is so hard coded, I can solve this maze without implementing a way to identify the red wall. I just make it stop after it has went through all the pre-defined states. It is, however, implemented in challenge 5 in order to make the code generalization possible. 
 
-### _Result_: 
-
-![Challenge 4 showcase](/media/gifs/challenge4_showcase.gif)
 
 
 
