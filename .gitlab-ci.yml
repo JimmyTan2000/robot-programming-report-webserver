@@ -19,7 +19,7 @@ build-webpages:
     paths:
     - _build/html
 
-build-pdf:
+.build-pdf:
   image: sphinxdoc/sphinx-latexpdf
   stage: build
   script:
