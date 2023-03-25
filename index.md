@@ -5,7 +5,7 @@ This is the report for the Robot Programming Course.
 Student: ***Jimmy Tan - 00819296***
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :caption: 'Table of Contents'
 
 ch1-problem.md
