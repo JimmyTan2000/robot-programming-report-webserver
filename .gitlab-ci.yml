@@ -1,12 +1,11 @@
 stages:
   - build
-  - deploy  
 
 variables:
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
   SSH_KNOWN_HOSTS: $SSH_KNOWN_HOSTS
 
-build-webpages:
+.build-webpages:
   image: python
   stage: build
   script:
@@ -19,7 +18,7 @@ build-webpages:
     paths:
     - _build/html
 
-.build-pdf:
+build-pdf:
   image: sphinxdoc/sphinx-latexpdf
   stage: build
   script:
@@ -42,7 +41,7 @@ build-webpages:
   - python -m pip install -U -r python-requirements.txt
   - SPHINXOPTS='-j auto -W' make spelling
 
-deploy-webpages:
+.deploy-webpages:
   image: python
   stage: deploy
   # from https://docs.gitlab.com/ee/ci/ssh_keys/
