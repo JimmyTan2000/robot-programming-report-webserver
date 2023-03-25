@@ -32,7 +32,7 @@ build-pdf:
     paths:
     - _build/latex/*pdf
 
-spellcheck:
+.spellcheck:
   image: archlinux
   stage: test
   script:
