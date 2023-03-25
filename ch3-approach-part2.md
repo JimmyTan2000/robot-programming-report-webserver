@@ -230,4 +230,4 @@ Competition, world_5_5_c:
 
 ### ***Visual diagram to show how the code works:*** 
 
-![Architecture Diagram](/media/architecture_plv2.drawio.png)
+![Architecture Diagram](/media/architecture_diagram_2.png)
