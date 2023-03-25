@@ -21,7 +21,6 @@ Of course, theory without implementation is merely a theory. In order to put thi
 Unlike the previous codes which uses very hard coded state machines, the state machine defined here is much more general. Attached below is the snippet of the code: 
 
 ```python
-
     class State(Enum):
         DRIVING = auto()
         BLOCKED = auto()
@@ -88,7 +87,6 @@ So, by looking at the picture before and after rotation, I decided to also check
 Below is the snippet of the code that identifies the junction: 
 
 ```python
-
     if msg.ranges[0] > 1.2 and msg.ranges[90] > 1.2 and self.state == State.DRIVING and msg.ranges[180] > 1.2 and self.state != State.END and self.rotate_condition != 1:
             self.state = State.AT_JUNCTION
 
@@ -132,7 +130,6 @@ When the robot is driving forward in the <mark>DRIVING</mark> state, it will con
 Below is the code snippet for the above mentioned implementation: 
 
 ```python
-
         if msg.ranges[0] < 0.6 and self.state != State.SEEN_RED_WALL and 
         self.state != State.REACHED_RED_WALL and self.state != State.END:
                 self.state = State.BLOCKED
@@ -194,9 +191,9 @@ Most of the time this implementation works fine, but it has 2 major drawbacks:
 ***2. Second implementation (The final decision)***  
 Instead of slowing down, I just make the robot bang into the wall at full speed and stop it as long as the laser distance sensor reads infinity. 
 
-```python
  Below is the code for the above mentioned implementation: 
 
+```python
         def touch_wall_and_stop(self, msg, slow_distance, next_state = None):
                 self.go()
                 if isinf(msg.ranges[0]) or isinf(msg.ranges[-90]):
