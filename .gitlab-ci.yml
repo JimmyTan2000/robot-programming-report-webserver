@@ -1,3 +1,7 @@
+stages:
+  - build
+  - deploy  
+
 variables:
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
   SSH_KNOWN_HOSTS: $SSH_KNOWN_HOSTS

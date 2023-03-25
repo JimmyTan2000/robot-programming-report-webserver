@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx-book template'
+project = 'Robot_Programming_Report'
 copyright = 'Creative Commons Attribution 4.0 International License'
-author = 'Gökçe Aydos'
+author = 'Jimmy Tan'
 html_logo = 'apple_notes_icon_public_domain_via_wikimedia_commons.svg'
 # Source: https://commons.wikimedia.org/wiki/File:Apple_Notes_icon.svg
 html_favicon = html_logo
@@ -31,11 +31,7 @@ html_favicon = html_logo
 # ones.
 extensions = [
     'myst_parser',
-    'sphinxcontrib.spelling',
 ]
-
-spelling_word_list_filename = 'spelling_word_list.txt'
-spelling_show_suggestions = True
 
 source_suffix = {
     '.md': 'markdown',
@@ -66,7 +62,7 @@ html_theme = 'sphinx_book_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['media']
 
 # -- Options for PDF output --------------------------------------------------
 latex_engine = 'lualatex'

@@ -1,16 +1,19 @@
-# Title
+# Robot Programming Report
 
-This is a Sphinx-book template that you can use for your report. Markdown examples are included.
+This is the report for the Robot Programming Course.
+
+Student: ***Jimmy Tan - 00819296***
 
 ```{toctree}
 :maxdepth: 2
-:caption: 'Contents'
+:caption: 'Table of Contents'
 
 ch1-problem.md
 ch2-relevant-concepts.md
-ch3-approach.md
+ch3-approach-part1.md
+ch3-approach-part2.md
 ch4-results.md
-markdown_examples.md
-spellcheck.md
-editing_video.md
+
 ```
+# Links 
+- [Code Source](https://mygit.th-deg.de/jt27296/plv-2)
