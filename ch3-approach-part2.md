@@ -20,6 +20,8 @@ Of course, theory without implementation is merely a theory. In order to put thi
 ### 1. State Machines 
 Unlike the previous codes which uses very hard coded state machines, the state machine defined here is much more general. Attached below is the snippet of the code: 
 
+```python
+
     class State(Enum):
         DRIVING = auto()
         BLOCKED = auto()
@@ -30,6 +32,7 @@ Unlike the previous codes which uses very hard coded state machines, the state m
         SEEN_RED_WALL = auto()
         REACHED_RED_WALL = ()
         END = auto()
+```
 
 As you can see from the code snippet above, the robot has more general states such as <mark>DRIVING</mark> and <mark>AT_JUNCTION</mark>. You can ignore the state <mark>DEBUG</mark> because it is only used to return sensor metadata for debugging during development process. The initial state of the robot is defined as State.DRIVING in the beginning by defining it in the class of Tb3 Node. 
 
@@ -200,15 +203,15 @@ Default 5 x 5 world, location 2:
 
 ![Code showcase 5 x 5, case 2](/media/gifs/challenge5_2_showcase.gif)
 
-Competetion, world_5_5_a:    
+Competition, world_5_5_a:    
 
 ![Code showcase world_5_5_a](/media/gifs/challenge5_a_showcase.gif)
 
-Competetion, world_5_5_b:    
+Competition, world_5_5_b:    
 
 ![Code showcase world_5_5_b](/media/gifs/challenge5_b_showcase.gif)
 
-Competetion, world_5_5_c:  
+Competition, world_5_5_c:  
 
 ![Code showcase world_5_5_c](/media/gifs/challenge5_c_showcase.gif)
 
