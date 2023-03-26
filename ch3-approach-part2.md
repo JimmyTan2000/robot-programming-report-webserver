@@ -89,9 +89,11 @@ Below is the snippet of the code that identifies the junction:
 ```python
     if msg.ranges[0] > 1.2 and msg.ranges[90] > 1.2 and self.state == State.DRIVING and msg.ranges[180] > 1.2 and self.state != State.END and self.rotate_condition != 1:
             self.state = State.AT_JUNCTION
+```
 
 and below is the code for the state AT_JUNCTION:
 
+```python
     if self.state == State.AT_JUNCTION:
             self.last_location_x.append(msg.pose.pose.position.x)
             self.last_location_y.append(msg.pose.pose.position.y)
