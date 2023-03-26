@@ -186,7 +186,7 @@ Below is the code snippet for the above mentioned implementation:
 
 Most of the time this implementation works fine, but it has 2 major drawbacks:   
 
-- Because the Laser Distance Sensor is too noisy, sometimes the robot will not slow down and it will bang into the wall in full speed and drive out the map. In order to fix this, I have to put the slow_distance to a larger value (robot will began to slow down at a further distance) and this will largely affect the maze solving time
+- Because the Laser Distance Sensor is too noisy, sometimes the robot will not slow down and it will bang into the wall with full speed and drives out of the map. In order to fix this, I have to put the slow_distance to a larger value (robot will begin to slow down at a further distance) and this will largely affect the maze solving time
 
 - Because the robot will drive very slowly (1% of its max linear velocity), it is not very competitive in terms of maze solving time 
 
