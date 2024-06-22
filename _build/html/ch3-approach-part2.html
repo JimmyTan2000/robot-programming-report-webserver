@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Approaches to Challenges (Part 2) &#8212; Robot_Programming_Report  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="static/doctools.js?v=9a2dae69"></script>
+    <script src="static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch3-approach-part2';</script>
+    <link rel="icon" href="static/apple_notes_icon_public_domain_via_wikimedia_commons.svg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Conclusion and Takeaways" href="ch4-results.html" />
+    <link rel="prev" title="Approaches to Challenges (Part 1)" href="ch3-approach-part1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="static/apple_notes_icon_public_domain_via_wikimedia_commons.svg" class="logo__image only-light" alt="Robot_Programming_Report  documentation - Home"/>
+    <script>document.write(`<img src="static/apple_notes_icon_public_domain_via_wikimedia_commons.svg" class="logo__image only-dark" alt="Robot_Programming_Report  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ch1-problem.html">The problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch2-relevant-concepts.html">Relevant concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch3-approach-part1.html">Approaches to Challenges (Part 1)</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Approaches to Challenges (Part 2)</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ch4-results.html">Conclusion and Takeaways</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="sources/ch3-approach-part2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Approaches to Challenges (Part 2)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Approaches to Challenges (Part 2)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-5">Challenge 5</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-theory">The Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-codes">The Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-machines">1. State Machines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#junction-identification">2. Junction Identification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-when-to-stop-rotating">3. Determining when to stop rotating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-for-the-direction-of-rotation-when-encountering-obstacles">4. Decision for the Direction of Rotation When Encountering Obstacles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#touch-the-red-wall-and-stop">Touch the red wall and stop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results"><em><strong>Results</strong></em>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-diagram-to-show-how-the-code-works"><em><strong>Visual diagram to show how the code works:</strong></em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="approaches-to-challenges-part-2">
+<h1>Approaches to Challenges (Part 2)<a class="headerlink" href="#approaches-to-challenges-part-2" title="Link to this heading">#</a></h1>
+</section>
+<section id="challenge-5">
+<h1>Challenge 5<a class="headerlink" href="#challenge-5" title="Link to this heading">#</a></h1>
+<p>This time, we are dealing with a much bigger 5 x 5 world. It was at this time that I realised our code has to be generalized so it is able to solve any other different mazes.</p>
+<section id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h2>
+<p>The solution can be broken down into 2 parts:</p>
+<ul class="simple">
+<li><p>The theory (How should the robot move so that it is guaranteed to reach and “see” the red wall at some point in time, even with different mazes?)</p></li>
+<li><p>The codes</p></li>
+</ul>
+<section id="the-theory">
+<h3>The Theory<a class="headerlink" href="#the-theory" title="Link to this heading">#</a></h3>
+<p>The core concept here is that, in a closed maze, the robot will eventually reach and face the red wall if it always turns left (or right) at the junction. In the case where the left side is not the correct way to solve the maze (it means right side is the correct path), the robot will eventually return to the same road (maybe after a few loops and rounds), and driving in the opposite direction. When it eventually returns to the junction where it had made the wrong choice (left instead of right), the robot will choose to turn “left” relative to it’s driving direction again. But because the driving direction is flipped, the “left” and “right” will be also flipped. Therefore, we can guarantee that at some point in time, the robot will eventually went through every places in the maze and solving it became a guarantee (although not very efficient).</p>
+</section>
+<section id="the-codes">
+<h3>The Codes<a class="headerlink" href="#the-codes" title="Link to this heading">#</a></h3>
+<p>Of course, theory without implementation is merely a theory. In order to put this into code, I have made some changes to the old codes and it will be broken down into several parts that will be listed below:</p>
+</section>
+<section id="state-machines">
+<h3>1. State Machines<a class="headerlink" href="#state-machines" title="Link to this heading">#</a></h3>
+<p>Unlike the previous codes which uses very hard coded state machines, the state machine defined here is much more general. Attached below is the snippet of the code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+        <span class="n">DRIVING</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">BLOCKED</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">AT_JUNCTION</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">DEBUG</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">ROTATING</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">CLEARED</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">SEEN_RED_WALL</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+        <span class="n">REACHED_RED_WALL</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="n">END</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>As you can see from the code snippet above, the robot has more general states such as <mark>DRIVING</mark> and <mark>AT_JUNCTION</mark>. You can ignore the state <mark>DEBUG</mark> because it is only used to return sensor metadata for debugging during development process. The initial state of the robot is defined as State.DRIVING in the beginning by defining it in the class of Tb3 Node.</p>
+<p>The snippet below shows the code of the class of Tb3 node:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">class</span> <span class="nc">Tb3</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;tb3&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">cmd_vel_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span>
+                    <span class="n">Twist</span><span class="p">,</span>      <span class="c1"># message type</span>
+                    <span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span>  <span class="c1"># topic name</span>
+                    <span class="mi">1</span><span class="p">)</span>          <span class="c1"># history depth</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">scan_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+                    <span class="n">LaserScan</span><span class="p">,</span>
+                    <span class="s1">&#39;scan&#39;</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">scan_callback</span><span class="p">,</span>  <span class="c1"># function to run upon message arrival</span>
+                    <span class="n">qos_profile_sensor_data</span><span class="p">)</span>  <span class="c1"># allows packet loss</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">odom_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+                    <span class="n">Odometry</span><span class="p">,</span>
+                    <span class="s1">&#39;odom&#39;</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">odom_callback</span><span class="p">,</span>  <span class="c1"># function to run upon message arrival</span>
+                    <span class="mi">1</span><span class="p">)</span>  <span class="c1"># allows packet loss</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">ang_vel_percent</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lin_vel_percent</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="c1"># DRIVING for normal execution and DEBUG for debugging</span>
+            <span class="c1"># self.state = State.DEBUG  </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">DRIVING</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rotate_condition</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_location_x</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_location_y</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="junction-identification">
+<h3>2. Junction Identification<a class="headerlink" href="#junction-identification" title="Link to this heading">#</a></h3>
+<p>Identifying a junction is one of the crucial part for making this algorithm work. Intuitively, this could easily be solved by identifying an open space at the left side of the robot and turn whenever an open space is detected. But this also means that we are abandoning turning to the right (eg: turning right might be the only choice for the robot when it is at the corner with its left side blocked). This could easily be solved by only applying the “always turn left” theory at the junction and implement a general rotating mechanism when a robot is blocked with obstacle in front (this part of the code will be explained later under the topic “4. Decision for the Direction of Rotation When Encountering Obstacles”)</p>
+<p>According to the definition above, being at a junction basically means the robot is not blocked (no obstacle in front) and there is an open space at its left side. I can demonstrate it using a diagram below:</p>
+<p><img alt="Junction example 1" src="images/junction_before.png" /></p>
+<p>The triangle represents the robot and the red arrow represents the direction of driving. The blue stripes represent the area we are scanning to define a junction (front and left). This diagram shows the position and orientation of the robot when it first reaches the junction without rotation.</p>
+<p>However, after rotation, the condition that defines what a junction is will still be satisfied. The front and left side of the robot would still be opened and the robot will be still in the <mark>AT_JUNCTION</mark> state and rotate again instead of driving into the left side of the junction. The diagram below shows the position and orientation of the robot after rotation:</p>
+<p><img alt="Junction example 2" src="images/junction_after.png" /></p>
+<p>So, by looking at the picture before and after rotation, I decided to also check the back of the robot. For example, before the robot rotates at the junction, the front, the left side and the back of the robot is opened. However, after rotation, the back side of the robot will be blocked by the wall. Therefore, if the back is blocked, I can know that the rotation of the robot at the junction is complete and I can therefore stop its rotation and switch it to the DRIVING state again so that it moves forward.</p>
+<p>Below is the snippet of the code that identifies the junction:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.2</span> <span class="ow">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">90</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.2</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">State</span><span class="o">.</span><span class="n">DRIVING</span> <span class="ow">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">180</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.2</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">!=</span> <span class="n">State</span><span class="o">.</span><span class="n">END</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotate_condition</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">AT_JUNCTION</span>
+</pre></div>
+</div>
+<p>and below is the code for the state AT_JUNCTION:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">State</span><span class="o">.</span><span class="n">AT_JUNCTION</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_location_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_location_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_location_x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mf">0.15</span> <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_location_y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mf">0.15</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">last_location_x</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">last_location_y</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">ROTATING</span>
+</pre></div>
+</div>
+<p>You will probably wonder why I append the x and y coordinates of the robot at the junction into some lists. It is used to delay the rotation of the robot. Without them, the robot will rotate as soon as it detects a junction, drives into it and bang into the wall because it turns too early. To solve this, I decided to store the x and y coordinates of the robot when it first detects the junction and by comparing its actual coordinates with those x and y coordinates recorded, I can make the robot turns only after travelling a certain distance along the x or y axis.</p>
+<p>A list is used to store the value of the coordinates instead of using a single normal variable because this block of code will always be executed as this is written in the <mark>odom_callback()</mark> function. Assigning a value to the x and y coordinates is meaningless because the value will be reset every time the odom_callback() function is called. By storing it into a list, I can just grab the first element of the list for the data, because new values will only be appended they will not overwrite the old value. After the robot started rotating, the lists will be reset and the state will be switched to <mark>ROTATING</mark>.</p>
+<p>So…what happens during the <mark>ROTATING</mark> state?</p>
+</section>
+<section id="determining-when-to-stop-rotating">
+<h3>3. Determining when to stop rotating<a class="headerlink" href="#determining-when-to-stop-rotating" title="Link to this heading">#</a></h3>
+<p>Reusing the diagram from challenge 3, we can see the value of “k” with the corresponding orientation returned by the <mark>odom_callback()</mark> function:</p>
+<p><img alt="Value of k with the corresponding orientation" src="images/odom_compass.png" /></p>
+<p>If the value of the absolute value (removing the negative sign) of k after rounding up is equal to 0, 90 and 180, we can conclude that it is almost parallel with the x and y axis. This also means that the robot has finished his rotation.</p>
+<p>From the code snippet below, we can see that the robot will stop rotating after the absolute value of k is equal to 0, 90 or 180 after rounding up, and the state will switch to <mark>DRIVING</mark>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">State</span><span class="o">.</span><span class="n">ROTATING</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">==</span> <span class="mi">90</span> <span class="ow">or</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">==</span> <span class="mi">180</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">DRIVING</span>
+</pre></div>
+</div>
+</section>
+<section id="decision-for-the-direction-of-rotation-when-encountering-obstacles">
+<h3>4. Decision for the Direction of Rotation When Encountering Obstacles<a class="headerlink" href="#decision-for-the-direction-of-rotation-when-encountering-obstacles" title="Link to this heading">#</a></h3>
+<p>When the robot is driving forward in the <mark>DRIVING</mark> state, it will constantly use the LaserScan data returned by the <mark>scan_callback()</mark> function to check if there is anything too near to the front of it. If the distance between the obstacle and the front part of the robot is smaller than 0.6, it will switch its state to <mark>BLOCKED</mark>.</p>
+<p>Below is the code snippet for the above mentioned implementation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.6</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">!=</span> <span class="n">State</span><span class="o">.</span><span class="n">SEEN_RED_WALL</span> <span class="ow">and</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">!=</span> <span class="n">State</span><span class="o">.</span><span class="n">REACHED_RED_WALL</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">!=</span> <span class="n">State</span><span class="o">.</span><span class="n">END</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">BLOCKED</span>
+</pre></div>
+</div>
+<p>When it is blocked, the robot will have 3 choices to turn depending on the scenario.</p>
+<p><em><strong>Scenario 1:</strong></em><br />
+The robot is facing a T-junction. In this situation, it should always turn left according to my “always turn left” approach. Therefore, it should rotate anticlockwise.</p>
+<p><em><strong>Scenario 2:</strong></em><br />
+The distance of the wall to the right side of the robot is bigger than that of left side. Which means that the right side is an open space, so the robot should turn clockwise and drive into the open space.</p>
+<p><em><strong>Scenario 3:</strong></em><br />
+The complete opposite of situation 2. In the case where the left side is an open space, the robot should turn anticlockwise and drive into the open space.</p>
+<p>The code for scenarios 1, 2 and 3 are all condensed in the code snippet below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">def</span> <span class="nf">decide_rotate_direction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;deciding&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span> <span class="p">[</span><span class="o">-</span><span class="mi">90</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.1</span> <span class="ow">and</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">90</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.1</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate_condition</span> <span class="o">=</span> <span class="mi">1</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="o">-</span><span class="mi">90</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">90</span><span class="p">]:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate_condition</span> <span class="o">=</span> <span class="mi">2</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">rotate_condition</span> <span class="o">=</span> <span class="mi">3</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">.</span><span class="n">ROTATING</span>
+</pre></div>
+</div>
+<p>The scenarios 1, 2 and 3 corresponds to the number of <mark>self.rotate_condition</mark> in the code above.</p>
+</section>
+<section id="touch-the-red-wall-and-stop">
+<h3>Touch the red wall and stop<a class="headerlink" href="#touch-the-red-wall-and-stop" title="Link to this heading">#</a></h3>
+<p><em><strong>1. First implementation</strong></em><br />
+At first, I just make the robot move very fast towards the red wall and slow down when it reaches a certain distance.
+Below is the code snippet for the above mentioned implementation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">def</span> <span class="nf">touch_wall_and_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">slow_distance</span><span class="p">,</span> <span class="n">next_state</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">slow_distance</span><span class="p">:</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+                 <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.12</span><span class="p">:</span>
+                                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Red wall touched&quot;</span><span class="p">)</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+</pre></div>
+</div>
+<p>Most of the time this implementation works fine, but it has 2 major drawbacks:</p>
+<ul class="simple">
+<li><p>Because the Laser Distance Sensor is too noisy, sometimes the robot will not slow down and it will bang into the wall with full speed and drives out of the map. In order to fix this, I have to put the slow_distance to a larger value (robot will begin to slow down at a further distance) and this will largely affect the maze solving time</p></li>
+<li><p>Because the robot will drive very slowly (1% of its max linear velocity), it is not very competitive in terms of maze solving time</p></li>
+</ul>
+<p><em><strong>2. Second implementation (The final decision)</strong></em><br />
+Instead of slowing down, I just make the robot bang into the wall at full speed and stop it as long as the laser distance sensor reads infinity.</p>
+<p>Below is the code for the above mentioned implementation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">def</span> <span class="nf">touch_wall_and_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">slow_distance</span><span class="p">,</span> <span class="n">next_state</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">isinf</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="n">isinf</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">ranges</span><span class="p">[</span><span class="o">-</span><span class="mi">90</span><span class="p">]):</span>
+                        <span class="c1"># print(&quot;inf registered&quot;)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+</pre></div>
+</div>
+</section>
+<section id="results">
+<h3><em><strong>Results</strong></em>:<a class="headerlink" href="#results" title="Link to this heading">#</a></h3>
+<p>With those codes implemented, we can generalize the maze solving capabalities in a surprisingly simple way. Below are a few of GIFs to demonstrate the code in action:</p>
+<p><em><strong>Showcases:</strong></em></p>
+<p>Default 5 x 5 world, location 1:</p>
+<p><img alt="Code showcase 5 x 5, case 1" src="images/challenge5_1_showcase.gif" /></p>
+<p>Default 5 x 5 world, location 2:</p>
+<p><img alt="Code showcase 5 x 5, case 2" src="images/challenge5_2_showcase.gif" /></p>
+<p>Competition, world_5_5_a:</p>
+<p><img alt="Code showcase world_5_5_a" src="images/challenge5_a_showcase.gif" /></p>
+<p>Competition, world_5_5_b:</p>
+<p><img alt="Code showcase world_5_5_b" src="images/challenge5_b_showcase.gif" /></p>
+<p>Competition, world_5_5_c:</p>
+<p><img alt="Code showcase world_5_5_c" src="images/challenge5_c_showcase.gif" /></p>
+</section>
+<section id="visual-diagram-to-show-how-the-code-works">
+<h3><em><strong>Visual diagram to show how the code works:</strong></em><a class="headerlink" href="#visual-diagram-to-show-how-the-code-works" title="Link to this heading">#</a></h3>
+<p><img alt="Architecture Diagram" src="images/architecture_diagram_2.png" /></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch3-approach-part1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Approaches to Challenges (Part 1)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ch4-results.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conclusion and Takeaways</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Approaches to Challenges (Part 2)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-5">Challenge 5</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-theory">The Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-codes">The Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-machines">1. State Machines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#junction-identification">2. Junction Identification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-when-to-stop-rotating">3. Determining when to stop rotating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-for-the-direction-of-rotation-when-encountering-obstacles">4. Decision for the Direction of Rotation When Encountering Obstacles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#touch-the-red-wall-and-stop">Touch the red wall and stop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results"><em><strong>Results</strong></em>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-diagram-to-show-how-the-code-works"><em><strong>Visual diagram to show how the code works:</strong></em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jimmy Tan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Creative Commons Attribution 4.0 International License.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
